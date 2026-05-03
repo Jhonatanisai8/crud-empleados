@@ -1,14 +1,16 @@
 import { Text, View } from "react-native";
-import React, { Component } from "react";
+import React from "react";
 
-export class CrudCard extends Component {
-  render() {
-    return (
-      <View>
-        <Text>CrudCard</Text>
-      </View>
-    );
-  }
-}
+const CrudCard = ({ nombre, apellido, correo, direccion, telefono }) => {
+  return (
+    <View>
+      <Text>{nombre}</Text>
+      <Text>{apellido}</Text>
+      <Text>{correo}</Text>
+      <Text>{direccion}</Text>
+      <Text>{telefono}</Text>
+    </View>
+  );
+};
 
 export default CrudCard;

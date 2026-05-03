@@ -6,7 +6,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <CrudCard />
+      <CrudCard
+        nombre="Jhonatan"
+        apellido="Rojas"
+        correo="test@gmail.com"
+        direccion="Calle 123"
+        telefono="123456789"
+      />
     </View>
   );
 }
