@@ -15,7 +15,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      {empleados.length === 0 ? (
+      {cargando ? (
         <ActivityIndicator style={styles.indicator}></ActivityIndicator>
       ) : (
         <FlatList
@@ -30,6 +30,8 @@ export default function App() {
             />
           )}
           keyExtractor={(item) => item.id.toString()}
+          contentContainerStyle={{ alignItems: "center" }}
+          style={{ width: "100%" }}
         />
       )}
     </View>
