@@ -31,7 +31,6 @@ export default function App() {
           )}
           keyExtractor={(item) => item.id.toString()}
           contentContainerStyle={{ alignItems: "center" }}
-          style={{ width: "100%" }}
         />
       )}
     </View>
