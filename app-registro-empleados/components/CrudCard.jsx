@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
   direccion: {
     fontSize: 16,
     color: "#0D0A0B",
-    fontStyle: "italic",
   },
   telefono: {
     fontSize: 16,

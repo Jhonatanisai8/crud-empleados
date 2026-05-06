@@ -1,18 +1,37 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  ActivityIndicator,
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import CrudCard from "./components/CrudCard";
+import { useEmpleado } from "./hooks/useEmpleado";
 
 export default function App() {
+  const { empleados, cargando, error } = useEmpleado();
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <CrudCard
-        nombre="Jhonatan"
-        apellido="Rojas"
-        correo="test@gmail.com"
-        direccion="Calle 123"
-        telefono="123456789"
-      />
+      {empleados.length === 0 ? (
+        <ActivityIndicator style={styles.indicator}></ActivityIndicator>
+      ) : (
+        <FlatList
+          data={empleados}
+          renderItem={({ item }) => (
+            <CrudCard
+              nombre={item.nombre}
+              apellido={item.apellido}
+              correo={item.correo}
+              direccion={item.direccion}
+              telefono={item.telefono}
+            />
+          )}
+          keyExtractor={(item) => item.id.toString()}
+        />
+      )}
     </View>
   );
 }
@@ -24,5 +43,12 @@ const styles = StyleSheet.create({
     marginTop: 40,
     alignItems: "center",
     backgroundColor: "#F18F01",
+  },
+  indicator: {
+    color: "#F18F01",
+    transform: [{ scale: 2 }],
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
   },
 });
