@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
     backgroundColor: "#F3EFF5",
-    width: "100%",
+    width: "90%",
     marginBottom: 15,
   },
   nombre: {

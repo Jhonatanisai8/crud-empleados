@@ -19,6 +19,7 @@ export default function App() {
         <ActivityIndicator style={styles.indicator}></ActivityIndicator>
       ) : (
         <FlatList
+          style={styles.containerEmpleados}
           data={empleados}
           renderItem={({ item }) => (
             <CrudCard
@@ -30,7 +31,8 @@ export default function App() {
             />
           )}
           keyExtractor={(item) => item.id.toString()}
-          contentContainerStyle={{ alignItems: "center" }}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.containerEmpleados}
         />
       )}
     </View>
@@ -51,5 +53,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flex: 1,
+  },
+  containerEmpleados: {
+    flex: 1,
+    backgroundColor: "#000",
+    alignSelf: "flex-start",
+    padding: 10,
   },
 });
