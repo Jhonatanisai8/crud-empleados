@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
     backgroundColor: "#F3EFF5",
-    width: "80%",
+    width: "90%",
   },
   nombre: {
     fontSize: 18,
@@ -51,10 +51,12 @@ const styles = StyleSheet.create({
   direccion: {
     fontSize: 16,
     color: "#0D0A0B",
+    fontStyle: "italic",
   },
   telefono: {
     fontSize: 16,
     color: "#0D0A0B",
+    fontWeight: "bold",
   },
   buttonContainer: {
     flexDirection: "row",
