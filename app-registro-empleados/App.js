@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
   containerEmpleados: {
     flex: 1,
     backgroundColor: "#000",
-    alignSelf: "flex-start",
     padding: 10,
   },
 });
