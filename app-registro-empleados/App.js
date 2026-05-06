@@ -56,7 +56,5 @@ const styles = StyleSheet.create({
   },
   containerEmpleados: {
     flex: 1,
-    backgroundColor: "#000",
-    padding: 10,
   },
 });
