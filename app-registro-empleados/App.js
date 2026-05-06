@@ -45,16 +45,13 @@ const styles = StyleSheet.create({
     padding: 20,
     marginTop: 40,
     alignItems: "center",
-    backgroundColor: "#F18F01",
+    backgroundColor: "#09f",
   },
   indicator: {
     color: "#F18F01",
     transform: [{ scale: 2 }],
     justifyContent: "center",
     alignItems: "center",
-    flex: 1,
-  },
-  containerEmpleados: {
     flex: 1,
   },
 });
