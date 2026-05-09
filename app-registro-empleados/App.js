@@ -14,6 +14,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Gestion de Empleados</Text>
+      <Text style={styles.subTitle}>Empleados</Text>
+      <Text></Text>
       <StatusBar style="auto" />
       {cargando ? (
         <ActivityIndicator style={styles.indicator}></ActivityIndicator>
@@ -53,5 +56,19 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flex: 1,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#FFFFFF",
+    marginBottom: 20,
+    justifyContent: "center",
+  },
+  subTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#FFFFFF",
+    marginBottom: 20,
+    alignSelf: "flex-start",
   },
 });
