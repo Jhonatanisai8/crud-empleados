@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import React, { Component } from "react";
 
-const InputComponent = ({ titulo,placeholder }) => {
+const InputComponent = ({ titulo, placeholder, value, onChangeText }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>{titulo}</Text>
@@ -9,7 +9,8 @@ const InputComponent = ({ titulo,placeholder }) => {
         style={styles.inputContainer}
         placeholder={placeholder}
         placeholderTextColor="#9CA3AF"
-        
+        value={value}
+        onChangeText={onChangeText}
       />
     </View>
   );
