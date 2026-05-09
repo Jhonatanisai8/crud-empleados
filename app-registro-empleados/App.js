@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import CrudCard from "./components/CrudCard";
 import { useEmpleado } from "./hooks/useEmpleado";
+import InputComponent from "./components/InputComponent";
 
 export default function App() {
   const { empleados, cargando, error } = useEmpleado();
@@ -16,7 +17,10 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.title}>Gestion de Empleados</Text>
       <Text style={styles.subTitle}>Empleados</Text>
-      <Text></Text>
+      <InputComponent
+        titulo="Nombre"
+        placeholder="Ingrese el nombre del empleado"
+      />
       <StatusBar style="auto" />
       {cargando ? (
         <ActivityIndicator style={styles.indicator}></ActivityIndicator>
